@@ -14,7 +14,6 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     sed -e 's/^app-path = .*$/app-path = \/data\/apps/' -i /etc/arangodb/arangod.conf && \
     sed -e 's/^data-path = .*$/data-path = \/data\/cluster/' -i /etc/arangodb/arangod.conf && \
     sed -e 's/^disable-authentication = .*$/disable-authentication = no/' -i /etc/arangodb/arangod.conf && \
-    sed -e 's/^disable-authentication = .*$/disable-authentication = no/' -i /etc/arangodb/arangob.conf && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add scripts
