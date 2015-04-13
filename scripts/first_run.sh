@@ -14,7 +14,7 @@ echo "require(\"org/arangodb/users\").save(\"$USER\", \"$PASS\")" | /usr/bin/ara
 # Create Database
 if [ ! -z "$DB" ]; then
     echo "Creating database: \"$DB\"..."
-    echo "db._createDatabase(\"$DB\")" | /usr/bin/arangosh
+    echo "db._createDatabase(\"$DB\"); db._useDatabase(\"$DB\"); require(\"org/arangodb/users\").save(\"$USER\", \"$PASS\")" | /usr/bin/arangosh
 fi
 
 # Stop ArangoDB service
