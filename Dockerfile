@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     apt-key add - < Release.key && \
     echo 'deb https://www.arangodb.org/repositories/arangodb2/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/arangodb.list && \
     apt-get update && \
-    apt-get install -y --force-yes arangodb=2.2.4 && \
+    apt-get install -y --force-yes arangodb=2.2.7 && \
     service arangodb stop && \
     sed -e 's/^directory = .*$/directory = \/data\/databases/' -i /etc/arangodb/arangod.conf && \
     sed -e 's/^app-path = .*$/app-path = \/data\/apps/' -i /etc/arangodb/arangod.conf && \
